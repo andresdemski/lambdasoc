@@ -66,6 +66,12 @@ class BIOSBuilder(ConfigBuilder):
             CONFIG_TIMER_IRQNO={{soc.intc.find_index(soc.timer.irq)}}
             CONFIG_TIMER_CTR_WIDTH={{soc.timer.width}}
             CONFIG_CLOCK_FREQ={{soc.clk_freq}}
+
+            {% if soc._sdram is defined %}
+            CONFIG_WITH_SDRAM=y
+            {% else %}
+            CONFIG_WITH_SDRAM=n
+            {% endif %}
         """,
     }
     command_templates = [
