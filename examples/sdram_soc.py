@@ -111,6 +111,6 @@ if __name__ == "__main__":
 
     soc.build(do_build=True, do_init=True)
 
-    with open("litedram_core_70MHz_native.v", "r") as f:
-        platform.add_file("litedram_core_70MHz_native.v", f)
+    with open("litedram_core_70MHz.v", "r") as f:
+        platform.add_file("litedram_core_70MHz.v", f)
     platform.build(soc, do_program=True)
