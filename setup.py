@@ -37,6 +37,7 @@ setup(
     packages=find_packages(),
     zip_safe=False, # install package as a directory. needed to build the SoC firmware.
     include_package_data=True,
+    package_data={"lambdasoc.periph": ["litedram_core_70MHz.v"]},
     project_urls={
         "Source Code": "https://github.com/lambdaconcept/lambdasoc",
         "Bug Tracker": "https://github.com/lambdaconcept/lambdasoc/issues",
