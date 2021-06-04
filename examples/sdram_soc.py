@@ -104,8 +104,8 @@ if __name__ == "__main__":
                                 uart_pins=platform.request("uart", 0),
          timer_addr=0x00006000, timer_width=32,
 
-           rom_addr=0x10000000, rom_size=0x4000,
-           ram_addr=0x10004000, ram_size=0x1000,
+           rom_addr=0x10000000, rom_size=0x8000,
+           ram_addr=0x10008000, ram_size=0x1000,
          sdram_addr=0x20000000, sdram_pins=sdram_pins,
     )
 
